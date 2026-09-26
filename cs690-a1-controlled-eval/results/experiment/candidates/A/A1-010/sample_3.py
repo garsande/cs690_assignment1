@@ -1,0 +1,10 @@
+def word_counts(text):
+    import string
+
+    punctuation = '.,;:!?"\'()[]{}'
+    return {
+        token: tokens.count(token)
+        for tokens in [[word.lower().strip(punctuation) for word in text.split()]]
+        for token in set(tokens)
+        if token
+    }

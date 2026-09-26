@@ -1,0 +1,21 @@
+from collections import deque
+
+def window_sums(values, width):
+    if width <= 0:
+        raise ValueError("width must be positive")
+    if width > len(values):
+        return []
+
+    window = deque()
+    total = 0
+    result = []
+
+    for value in values:
+        window.append(value)
+        total += value
+        if len(window) > width:
+            total -= window.popleft()
+        if len(window) == width:
+            result.append(total)
+
+    return result
