@@ -30,7 +30,8 @@ import time
 
 # Name and version of the sandbox image built from the Dockerfile. The runner
 # copies this value into every result row.
-IMAGE_TAG = "cs690-a1-sandbox:fall2026-v1"
+#IMAGE_TAG = "cs690-a1-sandbox:fall2026-v1"
+IMAGE_TAG = "cs690-a1-sandbox-fall2026-v1"
 
 
 @dataclass(frozen=True)
